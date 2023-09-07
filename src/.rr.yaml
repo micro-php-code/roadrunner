@@ -1,0 +1,26 @@
+version: '3'
+server:
+  command: 'php bin/index.php'
+http:
+  address: '0.0.0.0:8080'
+  access_logs: false
+  middleware:
+    - gzip
+  pool:
+    num_workers: 5
+    supervisor:
+      max_worker_memory: 100
+kv:
+  local:
+    driver: memory
+    config:
+      interval: 60
+
+logs:
+  level: info
+  mode: development
+  encoding: console
+  line_ending: "\n"
+reload:
+  interval: 1s
+  patterns: [ ".php" ]
