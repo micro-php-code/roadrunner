@@ -1,0 +1,19 @@
+{
+    "name": "microphp/roadrunner",
+    "autoload": {
+        "psr-4": {
+            "MicroPHP\\RoadRunner\\": "src/"
+        }
+    },
+    "type": "library",
+    "authors": [
+        {
+            "name": "liutao",
+            "email": "gg.cn.lt@gmail.com"
+        }
+    ],
+    "require": {
+        "spiral/roadrunner-http": "^3.1",
+        "spiral/roadrunner-cli": "^2.5"
+    }
+}
